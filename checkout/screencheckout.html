@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="screencheckout.css">
+</head>
+<body>
+  <!-- HEADER -->
+  <!--<header class="header">
+    <div class="logo">Feito Único</div>
+    <p><h2>Checkout Final</h2></p>
+    <input type="text" class="search-bar" placeholder="Buscar produtos, marcas e muito mais...">
+    <nav class="nav">
+      <a href="#">Início</a>
+      <a href="#">Ofertas</a>
+      <a href="#">Ajuda</a>
+      <a href="#">Minha Conta</a>
+    </nav>
+  </header>-->
+
+  <!-- MAIN -->
+  <main class="container">
+    <!-- PRODUTOS -->
+    <section class="produtos">
+      <h2>Checkout Final</h2>
+      <!--começo do selecionar todos os produtos-->
+      <div class="selecionar-todos">
+        <input type="checkbox" id="check-todos">
+        <label for="check-todos">Todos os Produtos</label>
+      </div>
+      <!--final do selecionar todos os produtos-->
+      <div class="produto">
+        <img src="../imagens/image1.jpg" alt="Produto 1">
+        <div class="info">
+          <p> BOLSA DE CROCHÊ | LINHA 12</p>
+          <span>R$ 100,00</span>
+          <div class="qtd">
+            <button class="menos">-</button>
+            <input type="number" value="1" min="1">
+            <button class="mais">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="produto">
+        <img src="../imagens/image5.jpg" alt="Produto 2">
+        <div class="info">
+          <p>COLAR PRAIANO | CONCHAS</p>
+          <span>R$ 50,00</span>
+          <div class="qtd">
+            <button class="menos">-</button>
+            <input type="number" value="1" min="1">
+            <button class="mais">+</button>
+          </div>
+        </div>
+      </div>
+       <div class="produto">
+        <img src="../imagens/image7.jpg" alt="Produto 2">
+        <div class="info">
+          <p>LOUÇAS DE CERÂMICA FRIA | 6 pcs</p>
+          <span>R$ 50,00</span>
+          <div class="qtd">
+            <button class="menos">-</button>
+            <input type="number" value="1" min="1">
+            <button class="mais">+</button>
+          </div>
+        </div>
+      </div>
+       <div class="produto">
+        <img src="../imagens/image2.jpg" alt="Produto 2">
+        <div class="info">
+          <p>MOÇA DE BARRO | ARYETE</p>
+          <span>R$ 50,00</span>
+          <div class="qtd">
+            <button class="menos">-</button>
+            <input type="number" value="1" min="1">
+            <button class="mais">+</button>
+          </div>
+        </div>
+      </div>
+       <div class="produto">
+        <img src="../imagens/image4.jpg" alt="Produto 2">
+        <div class="info">
+          <p>BACIA DE BARBANTE | 15cm</p>
+          <span>R$ 50,00</span>
+          <div class="qtd">
+            <button class="menos">-</button>
+            <input type="number" value="1" min="1">
+            <button class="mais">+</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUMO -->
+    <aside class="resumo">
+      <h3>Finalizar Compra</h3>
+      <p>Subtotal: <span id="subtotal">R$ 150,00</span></p>
+      <p>Frete: <span id="frete">R$ 20,00</span></p>
+      <p>Cupom: <span id="cupom">  </span></p>
+      <hr>
+      <p class="total">Total: <span id="total">R$ 170,00</span></p>
+      <!--<button id="finalizar"><a href="sc"></a>Como Deseja De Realizar o Pagamento?</button>-->
+      <!-- button !-->
+      <button class="button-73" role="button">Finalizar Compra</button>
+      <button id="abrir-cupom" class="btn-cupom">Inserir Cupom</button>
+
+
+      <div id="modal-cupom" class="modal">
+        <div class="modal-content">
+          <span class="fechar">&times;</span>
+          <h3>Cupons</h3>
+          <input type="text" id="campo-cupom" placeholder="Inserir código do cupom">
+          <button id="btn-aplicar-cupom">Adicionar cupom</button>
+        </div>
+      </div>
+
+      <!--butão-->
+      <p></p>
+      <form action="../formasdepag/screenpix/screenpix.html">
+        <input type="image" src="../imagens/pix.jpg" alt="pix" width="50" height="50">
+      </form>
+      <p></p>
+      <form action="../formasdepag/screencd/screencd.html">
+        <input type="image" src="../imagens/cartao-de-credito-icon.jpg" alt="cd" width="50" height="50">
+      </form>
+      <p></p>
+      <form action="../formasdepag/screenboleto/screenboleto.html">
+        <input type="image" src="../imagens/boletoicon.png" alt="boleto" width="50" height="50">
+      </form>
+
+      <!--<button id="pix"><img src="../imagens/pix.jpg" alt="pix"></button>
+      <button id="pix"><img src="../imagens/cartaocerto.jpg" alt="cd"></button>
+      <button id="pix"><img src="../imagens/boletoCERTOcopia.png" alt="boleto"></button>-->
+    </aside>
+  </main>  
+
+  <!-- CARROSSEL 
+  <section class="carrossel">
+    <h2>Produtos Semelhantes</h2>
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="item"><img src="../imagens/image5.jpg"><p>Produto 1</p></div>
+        <div class="item"><img src="../imagens/image4.jpg"><p>Produto 2</p></div>
+        <div class="item"><img src="../imagens/image7.jpg"><p>Produto 3</p></div>
+        <div class="item"><img src="../imagens/image1.jpg"><p>Produto 4</p></div>
+        <div class="item"><img src="../imagens/image3.jpg"><p>Produto 5</p></div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- RODAPÉ -->
+  <footer class="footer">
+    <p>&copy; 2025 Minha Loja - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="screencheckout.js"></script>
+</body>
+</html>

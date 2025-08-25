@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #eeece1, #e0db32);
+    font-family: sans-serif;
+    min-height: 100vh;
+}
+
+/* Header flutuante */
+header {
+    background: transparent; /* transparente para destacar o degradê */
+    color: rgb(14, 2, 2);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+    position: absolute; /* não se move*/
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+     color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    padding: 120px 20px 20px; /* espaço por causa do header flutuante */
+    box-sizing: border-box;
+    height: 100%;
+    gap: 20px;
+}
+
+.carrinho {
+    background: white; /* sem degradê aqui */
+    padding: 20px;
+    width: 70%;
+    border-radius: 25px;
+    overflow: auto;
+}
+
+.lista-itens .item {
+    display: grid;
+    grid-template-columns: 80px 1fr auto auto auto;
+    align-items: center;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 0;
+    gap: 10px;
+}
+
+.item img {
+    width: 70px;
+    border-radius: 5px;
+}
+
+.quantidade {
+    display: flex;
+    align-items: center;
+}
+
+.quantidade button {
+    background: #e1db71;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.remover {
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.resumo {
+    background: white; /* sem degradê aqui */
+    padding: 20px;
+    width: 30%;
+    height: fit-content;
+    border-radius: 25px;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+}
+
+#continuar {
+    background: rgb(229, 229, 229);
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* ... (seu CSS existente acima) ... */
+
+/* Produtos semelhantes (cards) */
+.produtos-semelhantes {
+  width: 90%;
+  margin: 30px auto 60px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.produtos-semelhantes h2 {
+  margin: 0 0 15px;
+}
+
+.produtos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.produto {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform .2s;
+}
+
+.produto:hover { transform: scale(1.03); }
+
+.produto img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.produto h3 {
+  font-size: 16px;
+  margin: 10px 0 6px;
+}
+
+.produto p {
+  font-size: 14px;
+  color: #555;
+  margin: 0 0 10px;
+}
+
+.produto .preco {
+  font-weight: 700;
+}
+

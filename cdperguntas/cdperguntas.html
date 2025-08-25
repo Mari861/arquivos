@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro do Artesão</title>
+    <link rel="stylesheet" href="cdperguntas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+     <header>
+        <div class="logo">
+            <h1>Feito Único</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#"><i class="fa-solid fa-house"></i>Início</a></li>
+                <li><a href="#"><i class="fa-solid fa-tag"></i>Promoções e Ofertas</a></li>
+                <li><a href="#"><i class="fa-solid fa-circle-question"></i>Ajuda</a></li>
+                <li><a href="#"><i class="fa-solid fa-user"></i>Minha Conta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+    <div class="container">
+        <!-- Coluna esquerda: Formulário -->
+        <div class="form-column">
+            <h2>Olá, artesão!</h2>
+            <p>Conte-nos um pouco mais sobre o seu trabalho para começarmos a divulgação da sua arte.</p>
+            <form id="formArtesao">
+                 <label for="nomeMarca">Nome da marca ou ateliê</label>
+                 <input type="text" id="nomeMarca" name="nomeMarca" placeholder="Ex: Arte com Amor" required>
+
+
+                 <label for="cidade">Data da criação de sua arte</label>
+                 <input type="text" id="cidade" name="cidade" placeholder="Ex: xx / xx / xxxx" required>
+
+
+                 <label for="cidade">CPF ou CNPJ</label>
+                 <input type="text" id="cidade" name="cidade" placeholder="Ex: Para fins de regularização do cadastro" required>
+
+
+                 <label for="cidade">endereço (vamos colocar no do CEP)</label>
+                 <input type="text" id="cidade" name="cidade" placeholder="Ex: endereço..." required>
+
+
+                 <label for="cidade">Telefone/ Whatsapp</label>
+                 <input type="text" id="cidade" name="cidade" placeholder="Ex: Com DDD" required>
+
+
+                 <label for="tipoArte">Categoria do artesanato que você trabalha:</label>
+                 <input type="text" id="tipoArte" name="tipoArte" placeholder="Ex: Crochê, cerâmica, bordado" required>
+
+
+                 <label for="descricao">Descreva brevemente seu trabalho</label>
+                 <textarea id="descricao" name="descricao" rows="4" placeholder="Máximo de 500 caracteres" required></textarea>
+
+
+                 <label for="instagram">Há quanto tempo atua como artesanato?</label>
+                 <input type="url" id="instagram" name="instagram" placeholder=" Ex: XX anos/meses">
+
+
+                 <label for="cidade">Cidade/Estado</label>
+                 <input type="text" id="cidade" name="cidade" placeholder="Ex: Recife - PE" required>
+
+
+                 <label for="cidade">Cidade/Estado</label>
+                 <input type="text" id="cidade" name="cidade" placeholder="Ex: Recife - PE" required>
+
+
+                 <label for="cidade">Cidade/Estado</label>
+                 <input type="text" id="cidade" name="cidade" placeholder="Ex: Recife - PE" required>
+
+
+                 <label for="foto">Fotos de seus produtos</label>
+                 <input type="file" id="foto" name="foto" accept="image/*">
+
+
+                 <label for="foto">Foto de perfil ou do seu trabalho (opcional)</label>
+                 <input type="file" id="foto" name="foto" accept="image/*">
+
+                <button type="submit">Finalizar Cadastro</button>
+            </form>
+        </div>
+
+        <!-- Coluna direita: Imagens -->
+       <section class="resumo">
+            <h2>Resumo do Pedido</h2>
+
+            <div class="polaroid-wrapper">
+                <div class="polaroid">
+                <img src="../imagens/image3.jpg" alt="Produto 1">
+                <div class="caption">POTES DE CIPÓ | 3 unid</div>
+                </div>
+                <div class="polaroid">
+                <img src="../imagens/image7.jpg" alt="Produto 2">
+                <div class="caption">LOUÇA DE CERÂMICA FRIA | 6 pcs</div>
+                </div>
+            </div>
+
+            <div class="polaroid-wrapper">
+                <div class="polaroid">
+                <img src="../imagens/image3.jpg" alt="Produto 1">
+                <div class="caption">POTES DE CIPÓ | 3 unid</div>
+                </div>
+                <div class="polaroid">
+                <img src="../imagens/image2.jpgjndyju76s" alt="Produto 2">
+                <div class="caption">LOUÇA DE CERÂMICA FRIA | 6 pcs</div>
+                </div>
+            </div>
+
+       <div class="polaroid-wrapper">
+        <div class="polaroid">
+          <img src="../imagens/image1.jpg" alt="Produto 1">
+          <div class="caption">POTES DE CIPÓ | 3 unid</div>
+        </div>
+        <div class="polaroid">
+          <img src="../imagens/image5.jpg" alt="Produto 2">
+          <div class="caption">LOUÇA DE CERÂMICA FRIA | 6 pcs</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="cdperguntas.js"></script>
+</body>
+</html>
+
+
+
+<!--<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações do Artesão</title>
+    <link rel="stylesheet" href="cdperguntas.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Conte-nos sobre sua arte</h1>
+        <form id="formArtesao">
+            <label for="nomeMarca">Nome da marca ou ateliê</label>
+            <input type="text" id="nomeMarca" name="nomeMarca" placeholder="Ex: Arte com Amor" required>
+
+            <label for="cidade">Data da criação de sua arte</label>
+            <input type="text" id="cidade" name="cidade" placeholder="Ex: xx / xx / xxxx" required>
+
+             <label for="cidade">CPF ou CNPJ</label>
+             <input type="text" id="cidade" name="cidade" placeholder="Ex: Para fins de regularização do cadastro" required>
+
+              <label for="cidade">endereço (vamos colocar no do CEP)</label>
+              <input type="text" id="cidade" name="cidade" placeholder="Ex: endereço..." required>
+
+             <label for="cidade">Telefone/ Whatsapp</label>
+             <input type="text" id="cidade" name="cidade" placeholder="Ex: Com DDD" required>
+
+            <label for="tipoArte">Categoria do artesanato que você trabalha:</label>
+            <input type="text" id="tipoArte" name="tipoArte" placeholder="Ex: Crochê, cerâmica, bordado" required>
+
+            <label for="descricao">Descreva brevemente seu trabalho</label>
+            <textarea id="descricao" name="descricao" rows="4" placeholder="Máximo de 500 caracteres" required></textarea>
+
+            <label for="instagram">Há quanto tempo atua como artesanato?</label>
+            <input type="url" id="instagram" name="instagram" placeholder=" Ex: XX anos/meses">
+
+            <label for="cidade">Cidade/Estado</label>
+            <input type="text" id="cidade" name="cidade" placeholder="Ex: Recife - PE" required>
+            
+            <label for="cidade">Cidade/Estado</label>
+            <input type="text" id="cidade" name="cidade" placeholder="Ex: Recife - PE" required>
+
+            <label for="cidade">Cidade/Estado</label>
+            <input type="text" id="cidade" name="cidade" placeholder="Ex: Recife - PE" required>
+
+             <label for="foto">Fotos de seus produtos</label>
+             <input type="file" id="foto" name="foto" accept="image/*">
+
+            <label for="foto">Foto de perfil ou do seu trabalho (opcional)</label>
+            <input type="file" id="foto" name="foto" accept="image/*">
+
+            <button type="submit">Finalizar Cadastro</button>
+        </form>
+    </div>
+
+    <script src="cdperguntas.js"></script>
+</body>
+</html>-->

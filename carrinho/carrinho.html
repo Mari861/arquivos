@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrinho</title>
+  <link rel="stylesheet" href="carrinho.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <header>
+    <div class="logo"><h1>Feito Único</h1></div>
+    <nav>
+      <ul>
+        <li><a href="#"><i class="fa-solid fa-house"></i>Início</a></li>
+        <li><a href="#"><i class="fa-solid fa-tag"></i>Promoções e Ofertas</a></li>
+        <li><a href="#"><i class="fa-solid fa-circle-question"></i>Ajuda</a></li>
+        <li><a href="#"><i class="fa-solid fa-user"></i>Minha Conta</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Linha principal (carrinho + resumo) -->
+  <main class="container">
+    <!-- Lista de Produtos -->
+    <section class="carrinho">
+      <h2 id="titulo-carrinho">Meu carrinho (7 itens)🛒</h2>
+      <div class="lista-itens">
+        <div class="item" data-preco="60,00">
+          <img src="../imagens/image1.jpg" alt="Produto">
+          <span class="nome">BOLSA DE CROCHÊ | LINHA 12 - 901027</span>
+          <div class="quantidade">
+            <button class="menos">-</button>
+            <span class="qtd">1</span>
+            <button class="mais">+</button>
+          </div>
+          <span class="valor">R$ 60,00</span>
+          <button class="remover">Remover</button>
+        </div>
+
+        <div class="item" data-preco="120,00">
+          <img src="../imagens/image2.jpg" alt="Produto 2">
+          <span class="nome">MOÇA DE BARRO | ARYETE - 901027</span>
+          <div class="quantidade">
+            <button class="menos">-</button>
+            <span class="qtd">1</span>
+            <button class="mais">+</button>
+          </div>
+          <span class="valor">R$ 120,00</span>
+          <button class="remover">Remover</button>
+        </div>
+
+        <div class="item" data-preco="10,99">
+          <img src="../imagens/image3.jpg" alt="Produto 3">
+          <span class="nome">POTES DE CIPÓ | 3 unid - 901027</span>
+          <div class="quantidade">
+            <button class="menos">-</button>
+            <span class="qtd">1</span>
+            <button class="mais">+</button>
+          </div>
+          <span class="valor">R$ 10,99</span>
+          <button class="remover">Remover</button>
+        </div>
+
+        <div class="item" data-preco="12,00">
+          <img src="../imagens/image4.jpg" alt="Produto 4">
+          <span class="nome">BACIA DE BARBANTE | 15cm - 901027</span>
+          <div class="quantidade">
+            <button class="menos">-</button>
+            <span class="qtd">1</span>
+            <button class="mais">+</button>
+          </div>
+          <span class="valor">R$ 12,00</span>
+          <button class="remover">Remover</button>
+        </div>
+
+        <div class="item" data-preco="35,00">
+          <img src="../imagens/image5.jpg" alt="Produto 5">
+          <span class="nome">COLAR PRAIANO | CONCHAS - 901027</span>
+          <div class="quantidade">
+            <button class="menos">-</button>
+            <span class="qtd">1</span>
+            <button class="mais">+</button>
+          </div>
+          <span class="valor">R$ 35,00</span>
+          <button class="remover">Remover</button>
+        </div>
+
+        <div class="item" data-preco="45,00">
+          <img src="../imagens/image6.jpg" alt="Produto 6">
+          <span class="nome">GARRAFA DECORATIVA | PERSONALIZADA - 901027</span>
+          <div class="quantidade">
+            <button class="menos">-</button>
+            <span class="qtd">1</span>
+            <button class="mais">+</button>
+          </div>
+          <span class="valor">R$ 45,00</span>
+          <button class="remover">Remover</button>
+        </div>
+
+        <div class="item" data-preco="64,00">
+          <img src="../imagens/image7.jpg" alt="Produto 7">
+          <span class="nome">LOUÇAS DE CERÂMICA FRIA | 6 pcs - 901027</span>
+          <div class="quantidade">
+            <button class="menos">-</button>
+            <span class="qtd">1</span>
+            <button class="mais">+</button>
+          </div>
+          <span class="valor">R$ 64,00</span>
+          <button class="remover">Remover</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resumo do Carrinho -->
+    <aside class="resumo">
+      <h3>RESUMO DO CARRINHO</h3>
+      <p>Itens: <span id="total-itens">7</span></p>
+      <p>Total a pagar: <span id="total-preco">R$ 346,99</span></p>
+      <button id="continuar">Continuar compra -> </button>
+      <p>✅ Compra 100% segura</p>
+      <p>🚚 Entrega garantida</p>
+      <p>🛡️ Garantia de satisfação</p>
+      <p>🎁 Frete grátis acima de R$ 199</p>
+      <p>📦 Devolução fácil em até 7 dias</p>
+    </aside>
+  </main>
+
+  <!-- Produtos semelhantes (abaixo do main) -->
+  <section class="produtos-semelhantes">
+    <h2>Produtos Semelhantes</h2>
+    <div class="produtos-container">
+      <div class="produto">
+        <img src="../imagens/image5.jpg" alt="Colar de Conchas">
+        <h3>Colar de Conchas</h3>
+        <p>Feito à mão com conchas naturais, ideal para looks praianos.</p>
+        <span class="preco">R$ 40,00</span>
+      </div>
+
+      <div class="produto">
+        <img src="../imagens/image4.jpg" alt="Bacia de Barbante">
+        <h3>Bacia de Barbante</h3>
+        <p>Cesto artesanal de 20cm, perfeito para decoração rústica.</p>
+        <span class="preco">R$ 18,00</span>
+      </div>
+
+      <div class="produto">
+        <img src="../imagens/image7.jpg" alt="Louças Artesanais">
+        <h3>Louças Artesanais</h3>
+        <p>Conjunto com 4 peças em cerâmica fria, resistentes e elegantes.</p>
+        <span class="preco">R$ 75,00</span>
+      </div>
+
+      <div class="produto">
+        <img src="../imagens/image1.jpg" alt="Bolsa Crochê">
+        <h3>Bolsa Crochê</h3>
+        <p>Bolsa feita à mão em linha 12, super estilosa e resistente.</p>
+        <span class="preco">R$ 65,00</span>
+      </div>
+
+      <div class="produto">
+        <img src="../imagens/image3.jpg" alt="Potes de Cipó">
+        <h3>Potes de Cipó</h3>
+        <p>Conjunto com 3 unidades, excelente para organização.</p>
+        <span class="preco">R$ 15,00</span>
+      </div>
+    </div>
+  </section>
+
+  <script src="carrinho.js"></script>
+</body>
+</html>

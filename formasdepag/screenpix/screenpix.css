@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 40px;
+}
+
+.container {
+  background: #fff;
+  border-radius: 8px;
+  max-width: 960px;
+  margin: auto;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.titulo-forma {
+  font-size: 14px;
+  color: #555;
+}
+
+.pix {
+  color: #06B39B;
+}
+
+.mensagem {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.pix-box {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.pix-info, .pix-instrucoes, .pix-qr {
+  flex: 1;
+  text-align: center;
+}
+
+.pix-logo {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.valor {
+  color: #777;
+  margin-top: 10px;
+}
+
+.preco {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+.icone-celular {
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.passo {
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.aviso {
+  font-size: 12px;
+  color: #999;
+  margin-top: 20px;
+}
+
+.detalhes {
+  margin-top: 20px;
+  text-align: left;
+}
+
+#toggleDetalhes {
+  background: none;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+#infoDetalhes {
+  margin-top: 10px;
+  background: #f1f1f1;
+  padding: 10px;
+  border-radius: 4px;
+}

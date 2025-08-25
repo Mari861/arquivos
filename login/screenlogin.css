@@ -1,0 +1,141 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #a7d8d0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box {
+    display: flex;
+    width: 900px;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.left-side, .right-side {
+    padding: 40px;
+    flex: 1;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-side h2 {
+    margin-bottom: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.social-icons a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    color: #333;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    background-color: #ddd;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #4CAF50;
+}
+
+.forgot {
+    font-size: 14px;
+    color: #009879;
+    text-decoration: none;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 10px;
+    background-color: #009879;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    background-color: #007f65;
+}
+
+.right-side {
+    background-color: #009879;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 150px;
+    border-bottom-left-radius: 150px;
+    text-align: center;
+}
+
+.right-side h2 {
+    margin-bottom: 10px;
+}
+
+.right-side p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.btn-register {
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-register:hover {
+    background-color: white;
+    color: #009879;
+}

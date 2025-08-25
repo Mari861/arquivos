@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Pagamento PIX</title>
+  <link rel="stylesheet" href="screenpix.css">
+</head>
+<body>
+  <div class="container">
+    <p class="titulo-forma">Forma de pagamento escolhida: <strong class="pix">Pix</strong> - Débito online</p>
+    <p class="mensagem">Falta pouco! Pague seu Pix através do app da instituição de sua preferência.</p>
+
+    <div class="pix-box">
+      <div class="pix-info">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Logo_PIX_2021.svg" alt="Pix logo" class="pix-logo">
+        <p class="valor">Valor do pagamento</p>
+        <p class="preco">R$ 11,00</p>
+      </div>
+
+      <div class="pix-instrucoes">
+        <img src="https://cdn-icons-png.flaticon.com/512/3665/3665923.png" alt="Celular com QR" class="icone-celular">
+        <div class="passo">
+          <strong>1</strong> Abra seu app <strong>PagBank</strong> ou da instituição financeira de sua preferência.
+        </div>
+        <div class="passo">
+          <strong>2</strong> Aponte a câmera do seu celular para o <strong>QR Code Pix</strong>.
+        </div>
+        <p class="aviso">Em caso de análise, a transação pode demorar até 60 minutos para ser confirmada.</p>
+      </div>
+
+      <div class="pix-qr">
+        <img src="../screenpix/qrcode.png" alt="QR Code PIX">
+      </div>
+    </div>
+
+    <div class="detalhes">
+      <button id="toggleDetalhes">Mais Detalhes ▼</button>
+      <div id="infoDetalhes" style="display: none;">
+        <p>Chave Pix: pix@exemplo.com</p>
+        <p>Instituição: PagBank</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="screenpix.js"></script>
+</body>
+</html>

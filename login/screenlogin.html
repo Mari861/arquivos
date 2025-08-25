@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="screenlogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="left-side">
+                <h2>Iniciar Sessão</h2>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+                <form id="loginForm">
+                    <input type="email" id="email" placeholder="Email" required>
+                    <input type="password" id="password" placeholder="Senha" required>
+                    <a href="#" class="forgot">Esqueceu sua senha?</a>
+                    <button type="submit" class="btn-login">Iniciar Sessão</button>
+                </form>
+
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-google"></i></a>
+                    <a href="#"><i class="fab fa-apple"></i></a>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <h2>Bem-vindo!</h2>
+                <p>Insira seus dados pessoais para acessar todas as funções do site</p>
+                <!-- ✅ Caminho corrigido para screencadastro.html -->
+                <a href="../cadastro/screencadastro.html" class="btn-register">Registrar-se</a>
+            </div>
+        </div>
+    </div>
+    <script src="screenlogin.js"></script>
+</body>
+</html>
