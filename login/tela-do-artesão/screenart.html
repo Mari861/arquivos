@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil do Artesão</title>
+  <link rel="stylesheet" href="../tela-do-artesão/screenart.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="profile-pic">
+        <img id="fotoPerfil" src="https://via.placeholder.com/100" alt="Foto Artesão">
+        <h2>Flora Mendes Artesão</h2>
+        <p class="email">FloraMendes@artesanato.com</p>
+        <input type="file" id="uploadFoto" accept="image/*">
+      </div>
+
+      <nav class="menu">
+        <a href="#">Meus Produtos</a>
+        <a href="#">Pedidos</a>
+        <a href="#">Mensagens</a>
+        <a href="#">Configurações</a>
+        <a href="#" class="logout">Sair</a>
+      </nav>
+    </aside>
+
+    <!-- Conteúdo -->
+    <main class="content">
+      <header class="content-header">
+        <h1>Perfil</h1>
+        <button class="btn-visualizar">👁 Visualizar perfil completo</button>
+      </header>
+
+      <section class="profile-summary card">
+        <h2>Resumo do Perfil</h2>
+        <p><strong>Nome:</strong> João Artesão</p>
+        <p><strong>Especialidade:</strong> Esculturas em Madeira</p>
+        <p><strong>Telefone:</strong> (31) 99999-9999</p>
+        <p><strong>Email:</strong> joao@artesanato.com</p>
+        <p><strong>Site:</strong> www.joaoartesao.com</p>
+      </section>
+
+      <section class="profile-area card">
+        <h2>Área de Atuação</h2>
+        <select>
+          <option>Madeira</option>
+          <option>Cerâmica</option>
+          <option>Tecelagem</option>
+          <option>Bordado</option>
+        </select>
+      </section>
+
+      <section class="profile-skills card">
+        <h2>Habilidades</h2>
+        <ul id="skills-list"></ul>
+        <input type="text" id="skill-input" placeholder="Adicionar habilidade...">
+        <button onclick="addSkill()">Adicionar</button>
+      </section>
+
+      <section class="profile-competencias card">
+        <h2>Competências</h2>
+        <ul id="competencias-list"></ul>
+        <input type="text" id="competencia-input" placeholder="Adicionar competência...">
+        <button onclick="addCompetencia()">Adicionar</button>
+      </section>
+    </main>
+  </div>
+
+  <script src="../tela-do-artesão/screenart.js"></script>
+</body>
+</html>

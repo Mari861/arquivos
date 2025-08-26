@@ -1,17 +1,26 @@
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+function expandEffect(color, redirect = null) {
+  const overlay = document.createElement("div");
+  overlay.classList.add("expand", color);
+  document.body.appendChild(overlay);
 
-    const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
+  setTimeout(() => {
+    overlay.style.width = "100%";
+  }, 10);
 
-    if (!email || !password) {
-        alert("Preencha todos os campos!");
-        return;
+  setTimeout(() => {
+    overlay.remove();
+    if (redirect) {
+      window.location.href = redirect; // redireciona após a animação
     }
+  }, 1000);
+}
 
-    if (email === "teste@email.com" && password === "123456") {
-        alert("Login realizado com sucesso!");
-    } else {
-        alert("E-mail ou senha incorretos!");
-    }
+// Botão verde (Bem-vindo -> Entrar)
+document.getElementById("signInBtn").addEventListener("click", () => {
+  expandEffect("green", "../login/tela-do-artesão/screenart.html"); // redireciona para screenart.html
+});
+
+// Botão branco (Criar Conta -> Inscreva-se)
+document.getElementById("signUpBtn").addEventListener("click", () => {
+  expandEffect("white");
 });

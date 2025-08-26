@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background: #f6f6f6;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #1e1e1e;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.sidebar .profile-pic {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid #2ab58c;
+}
+
+.sidebar h2 {
+  font-size: 18px;
+}
+
+.sidebar .email {
+  font-size: 12px;
+  color: #bbb;
+}
+
+.sidebar .menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sidebar .menu a {
+  padding: 12px;
+  color: #ddd;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.sidebar .menu a:hover {
+  background: #2ab58c;
+  color: #fff;
+}
+
+.sidebar .logout {
+  margin-top: auto;
+  background: #ff5252;
+  text-align: center;
+  border-radius: 6px;
+}
+
+/* Conteúdo */
+.content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn-visualizar {
+  background: #2ab58c;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-visualizar:hover {
+  background: #239c77;
+}
+
+.card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.card input, .card select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.card button {
+  padding: 8px 15px;
+  background: #2ab58c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: #239c77;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  background: #eee;
+  margin: 5px 0;
+  padding: 6px 10px;
+  border-radius: 6px;
+}

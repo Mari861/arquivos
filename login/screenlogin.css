@@ -1,141 +1,134 @@
-/* Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #a7d8d0;
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f6f5f7;
 }
 
-.container {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.card {
+  display: flex;
+  width: 850px;
+  height: 500px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(27, 0, 182, 0.2);
+  position: relative;
 }
 
-.login-box {
-    display: flex;
-    width: 900px;
-    height: 500px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 20px rgba(0,0,0,0.2);
-    overflow: hidden;
+.left, .right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
 }
 
-.left-side, .right-side {
-    padding: 40px;
-    flex: 1;
+.left {
+  background: #d4ca32;
+  color: white;
 }
 
-.left-side {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.left h1 {
+  margin-bottom: 15px;
+  font-size: 28px;
 }
 
-.left-side h2 {
-    margin-bottom: 20px;
+.left p {
+  margin-bottom: 25px;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.social-icons {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+.right {
+  background: #ffffff;
 }
 
-.social-icons a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 35px;
-    height: 35px;
-    background-color: #f1f1f1;
-    border-radius: 5px;
-    color: #333;
-    font-size: 18px;
-    text-decoration: none;
+.right h1 {
+  margin-bottom: 15px;
+  font-size: 28px;
 }
 
-.social-icons a:hover {
-    background-color: #ddd;
+.right p {
+  margin: 10px 0 20px;
+  font-size: 14px;
+  color: #555;
 }
 
 input {
-    width: 100%;
-    padding: 10px;
-    margin: 8px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    outline: none;
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #f0f0f0;
 }
 
-input:focus {
-    border-color: #4CAF50;
+.btn {
+  margin-top: 15px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  background: #2ab58c;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.3s;
 }
 
-.forgot {
-    font-size: 14px;
-    color: #009879;
-    text-decoration: none;
+.btn:hover {
+  transform: scale(1.05);
 }
 
-.btn-login {
-    width: 100%;
-    padding: 10px;
-    background-color: #009879;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    margin-top: 15px;
-    cursor: pointer;
+.social-container {
+  display: flex;
+  justify-content: center;
+  margin: 15px 0;
 }
 
-.btn-login:hover {
-    background-color: #007f65;
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 0 8px;
+  border-radius: 50%;
+  border: 1px solid #aaa;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.right-side {
-    background-color: #009879;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-top-left-radius: 150px;
-    border-bottom-left-radius: 150px;
-    text-align: center;
+.social:hover {
+  background: #eee;
 }
 
-.right-side h2 {
-    margin-bottom: 10px;
+/* Efeito de expansão */
+.expand {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  z-index: 10;
+  background: transparent;
+  transition: width 0.8s ease;
 }
 
-.right-side p {
-    font-size: 14px;
-    margin-bottom: 20px;
+.expand.green {
+  background: #2ab58c;
 }
 
-.btn-register {
-    background-color: transparent;
-    border: 2px solid white;
-    padding: 10px 20px;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.btn-register:hover {
-    background-color: white;
-    color: #009879;
+.expand.white {
+  background: #fff;
 }
