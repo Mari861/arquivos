@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detalhe do Produto</title>
+<link rel="stylesheet" href="../detalhedoproduto/detalhedoproduto.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+<header>
+  <h1>Detalhe do Produto</h1>
+</header>
+
+<main class="detail-container">
+
+  <!-- Galeria de fotos -->
+  <div class="photo-gallery">
+    <img id="foto" class="main-photo" src="../imagens/image7.jpg" alt="Produto">
+    <div class="thumbnails">
+      <img src="../imagens/image7.jpg" class="thumb" onclick="trocarFoto(this)">
+      <img src="../imagens/image8.jpg" class="thumb" onclick="trocarFoto(this)">
+      <img src="../imagens/image9.jpg" class="thumb" onclick="trocarFoto(this)">
+      <img src="../imagens/image10.jpg" class="thumb" onclick="trocarFoto(this)">
+    </div>
+  </div>
+
+  <!-- Informações do produto -->
+  <div class="product-info">
+    <h2 id="titulo">Colar artesanal</h2>
+    <p id="preco">R$ 50</p>
+
+    <!-- Lucro privado com toggle -->
+    <p class="private-info">
+      <span id="lucro" class="hidden">Lucro estimado: R$ 20</span>
+      <i class="fa-regular fa-eye eye-icon" onclick="toggleLucro()" title="Mostrar/ocultar lucro"></i>
+    </p>
+
+    <p id="descricao">Colar feito à mão com detalhes exclusivos.</p>
+
+    <p><strong>Status:</strong> 
+      <span id="status">Disponível</span> 
+      <button class="status-btn" onclick="alterarStatus()">Alterar</button>
+    </p>
+
+    <p><strong>Estoque:</strong> <span id="estoque">5</span></p>
+    <p><strong>Visualizações:</strong> <span id="views">0</span></p>
+  </div>
+
+  <!-- Botões de ação -->
+  <div class="actions">
+    <button class="edit-btn" onclick="editarProduto()"><i class="fa-solid fa-pen"></i> Editar Produto</button>
+    <button class="share-btn" onclick="compartilharProduto()"><i class="fa-solid fa-link"></i> Compartilhar</button>
+    <button class="sale-btn" onclick="registrarVenda()"><i class="fa-solid fa-cart-plus"></i> Registrar Venda</button>
+  </div>
+
+</main>
+
+<script src="../detalhedoproduto/detalhedoproduto.js"></script>
+</body>
+</html>

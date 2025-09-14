@@ -3,36 +3,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tela de Login</title>
-  <link rel="stylesheet" href="../login/screenlogin.css">
+  <title>Cadastro do Artesão</title>
+  <link rel="stylesheet" href="screenlogin.css">
 </head>
 <body>
-  <div class="card">
-    <!-- Lado Verde -->
-    <div class="left">
-      <h1>Bem-Vindo(a)!</h1>
-      <p>Para continuar conectado conosco, faça login com suas informações pessoais</p>
-      <button class="btn" id="signInBtn">Entrar</button>
-    </div>
+  <div class="container">
+    <h1>Dados Básicos</h1>
+    <form id="formArtesao">
+      <!-- Nome -->
+      <label for="nome">Nome completo ou artístico *</label>
+      <input type="text" id="nome" name="nome" required placeholder="Ex: Maria Artesã">
 
-    <!-- Lado Branco -->
-    <div class="right">
-      <h1>Criar Conta</h1>
-      <h6>"Crie uma conta para salvar seus produtos favoritos e receber novidades dos artesãos que você segue".</h6>
-      <div class="social-container">
-        <a href="#"><div class="social">F</div></a>
-        <a href="#"><div class="social">G+</div></a>
-        <a href="#"><div class="social">IN</div></a>
-      </div>
-      <p>ou use seu e-mail para registro:</p>
-      <input type="text" placeholder="Name" />
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" />
-      <button class="btn" id="signUpBtn">Inscreva-se</button>
-       <button class="btn" id="signUpBtn">Continuar sem conta</button>
-    </div>
+      <!-- WhatsApp -->
+      <label for="whatsapp">WhatsApp *</label>
+      <input type="tel" id="whatsapp" name="whatsapp" required placeholder="(DDD) 9 9999-9999">
+
+      <!-- Cidade e Estado -->
+      <label for="cidade">Cidade *</label>
+      <input type="text" id="cidade" name="cidade" required placeholder="Ex: Recife">
+
+      <label for="estado">Estado *</label>
+      <select id="estado" name="estado" required>
+        <option value="">Selecione...</option>
+        <option value="PE">PE</option>
+        <option value="SP">SP</option>
+        <option value="RJ">RJ</option>
+        <option value="MG">MG</option>
+        <option value="BA">BA</option>
+        <!-- pode adicionar todos os estados -->
+      </select>
+
+      <!-- Tipo de Artesanato -->
+      <label for="tipo">Tipo de Artesanato *</label>
+      <select id="tipo" name="tipo" required>
+        <option value="">Selecione...</option>
+        <option value="ceramica">Cerâmica</option>
+        <option value="madeira">Madeira</option>
+        <option value="tecido">Tecido</option>
+        <option value="bijuteria">Bijuteria</option>
+        <option value="outros">Outros</option>
+      </select>
+
+      <!-- Redes sociais -->
+      <label for="instagram">Instagram (opcional)</label>
+      <input type="url" id="instagram" name="instagram" placeholder="https://instagram.com/seu_perfil">
+
+      <label for="facebook">Facebook (opcional)</label>
+      <input type="url" id="facebook" name="facebook" placeholder="https://facebook.com/seu_perfil">
+
+      <!-- Botão -->
+      <button type="submit" class="btn">Começar a vender</button>
+    </form>
   </div>
-
-  <script src="../login/screenlogin.js"></script>
+  
+  <script src="screenlogin.js"></script>
 </body>
 </html>

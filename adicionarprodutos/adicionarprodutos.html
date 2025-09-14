@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adicionar Produto</title>
+<link rel="stylesheet" href="../adicionarprodutos/adicionarprodutos.css">
+</head>
+<body>
+  <header>
+    <h1>Adicionar Produto</h1>
+  </header>
+
+  <main class="form-container">
+    <form id="produto-form">
+      <label for="titulo">Título:</label>
+      <input type="text" id="titulo" required>
+
+      <label for="preco">Preço (R$):</label>
+      <input type="number" id="preco" required>
+
+      <label for="descricao">Descrição:</label>
+      <textarea id="descricao"></textarea>
+
+      <label for="quantidade">Quantidade em estoque:</label>
+      <input type="number" id="quantidade" min="0" required>
+
+      <label for="status">Status:</label>
+      <select id="status">
+        <option value="disponivel">Disponível</option>
+        <option value="pausado">Pausado</option>
+        <option value="esgotado">Esgotado</option>
+      </select>
+
+     <label>Escolha uma imagem:</label>
+      <div class="file-upload">
+        <button type="button" id="choose-btn">Selecionar Imagem</button>
+        <input type="file" id="foto" accept="image/*">
+      </div>
+      <img id="preview" src="" alt="Pré-visualização" style="display:none;">
+
+      <button type="submit">Salvar Produto</button>
+    </form>
+  </main>
+
+  <script src="../adicionarprodutos/adicionarprodutos.js"></script>
+</body>
+</html>

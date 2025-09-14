@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meus Produtos</title>
+<link rel="stylesheet" href="../meusprodutos/meusprodutos.css">
+</head>
+<body>
+  <header>
+    <h1>Meus Produtos</h1>
+    <input type="text" id="busca" placeholder="Buscar produto..." oninput="listarProdutos()">
+    <select id="filtro" onchange="listarProdutos()">
+      <option value="">Todos</option>
+      <option value="disponivel">Disponíveis</option>
+      <option value="pausado">Pausados</option>
+      <option value="esgotado">Esgotados</option>
+    </select>
+  </header>
+
+  <!-- HTML !-->
+  <main>
+    <div class="meu-container">
+      <!--<h1>Sua vitrine está vazia.</h1>
+      <button class="adicionarproduto" role="button">Adicionar Produto</button>
+    </div>--> 
+
+    <div id="products-grid" class="grid">
+      <!-- Produto 1 -->
+      <div class="product-card" onclick="abrirDetalhe(1)">
+        <img src="../imagens/IMAGENS DOS PRODUTOS/image1.jpg" alt="Colar artesanal">
+        <h3> BOLSA DE CROCHÊ | LINHA 12</h3>
+        <p>R$ 50</p>
+        <div class="status disponivel">
+          <div class="status-dot"></div>
+          <span>disponivel</span>
+        </div>
+      </div>
+ 
+      <!-- Produto 2 -->
+      <div class="product-card" onclick="abrirDetalhe(2)">
+        <img src="../imagens/IMAGENS DOS PRODUTOS/image2.jpg" alt="Quadro pintado à mão">
+        <h3>MOÇA DE BARRO | ARYETE</h3>
+        <p>R$ 120</p>
+        <div class="status pausado">
+          <div class="status-dot"></div>
+          <span>pausado</span>
+        </div>
+      </div>
+
+      <!-- Produto 3 -->
+      <div class="product-card" onclick="abrirDetalhe(3)">
+        <img src="../imagens/IMAGENS DOS PRODUTOS/image3.jpg" alt="Escultura em madeira">
+        <h3>POTES DE CIPÓ | 3 unid</h3>
+        <p>R$ 200</p>
+        <div class="status esgotado">
+          <div class="status-dot"></div>
+          <span>esgotado</span>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="abrirDetalhe(3)">
+        <img src="../imagens/IMAGENS DOS PRODUTOS/image4.jpg" alt="Escultura em madeira">
+        <h3>BACIA DE BARBANTE | 15cm</h3>
+        <p>R$ 200</p>
+        <div class="status esgotado">
+          <div class="status-dot"></div>
+          <span>esgotado</span>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="abrirDetalhe(3)">
+        <img src="../imagens/IMAGENS DOS PRODUTOS/image5.jpg" alt="Escultura em madeira">
+        <h3>COLAR PRAIANO | CONCHAS</h3>
+        <p>R$ 200</p>
+        <div class="status esgotado">
+          <div class="status-dot"></div>
+          <span>esgotado</span>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="abrirDetalhe(3)">
+        <img src="../imagens/IMAGENS DOS PRODUTOS/image6.jpg" alt="Escultura em madeira">
+        <h3>GARRAFA DECORATIVA | PERSONALIZADA</h3>
+        <p>R$ 200</p>
+        <div class="status esgotado">
+          <div class="status-dot"></div>
+          <span>esgotado</span>
+        </div>
+      </div>
+
+      <div class="product-card" onclick="abrirDetalhe(3)">
+        <img src="../imagens/IMAGENS DOS PRODUTOS/image7.jpg" alt="Escultura em madeira">
+        <h3>LOUÇAS DE CERÂMICA FRIA | 6 pcs</h3>
+        <p>R$ 200</p>
+        <div class="status esgotado">
+          <div class="status-dot"></div>
+          <span>esgotado</span>
+        </div>
+      </div>
+
+       <div class="product-card" onclick="abrirDetalhe(3)">
+        <img src="../imagens/IMAGENS DOS PRODUTOS/image8.jpg" alt="Escultura em madeira">
+        <h3>JARRO ÁRABE |  3 Pcs</h3>
+        <p>R$ 200</p>
+        <div class="status esgotado">
+          <div class="status-dot"></div>
+          <span>esgotado</span>
+        </div>
+      </div>
+
+       <div class="product-card" onclick="abrirDetalhe(3)">
+        <img src="../imagens/IMAGENS DOS PRODUTOS/image9.jpg" alt="Escultura em madeira">
+        <h3>BANCOS DECORATIVO CASA</h3>
+        <p>R$ 200</p>
+        <div class="status esgotado">
+          <div class="status-dot"></div>
+          <span>esgotado</span>
+        </div>
+      </div>
+
+       <div class="product-card" onclick="abrirDetalhe(3)">
+        <img src="../imagens/IMAGENS DOS PRODUTOS/image10.jpg" alt="Escultura em madeira">
+        <h3>JARRO AZUL CORDEAL </h3>
+        <p>R$ 200</p>
+        <div class="status esgotado">
+          <div class="status-dot"></div>
+          <span>esgotado</span>
+        </div>
+      </div>
+
+       <div class="product-card" onclick="abrirDetalhe(3)">
+        <img src="../imagens/IMAGENS DOS PRODUTOS/image11.jpeg" alt="Escultura em madeira">
+        <h3>VESTIDOS MADE IN PIAUÍ</h3>
+        <p>R$ 200</p>
+        <div class="status esgotado">
+          <div class="status-dot"></div>
+          <span>esgotado</span>
+        </div>
+      </div>
+
+       <div class="product-card" onclick="abrirDetalhe(3)">
+        <img src="../imagens/IMAGENS DOS PRODUTOS/image12.jpg" alt="Escultura em madeira">
+        <h3>BLUSA TRICÔ | P,M,G</h3>
+        <p>R$ 200</p>
+        <div class="status esgotado">
+          <div class="status-dot"></div>
+          <span>esgotado</span>
+        </div>
+      </div>
+
+       <div class="product-card" onclick="abrirDetalhe(3)">
+        <img src="../imagens/IMAGENS DOS PRODUTOS/image13.jpg" alt="Escultura em madeira">
+        <h3>BLUSA PRAIANA FLOR DO SERTÃO</h3>
+        <p>R$ 200</p>
+        <div class="status esgotado">
+          <div class="status-dot"></div>
+          <span>esgotado</span>
+        </div>
+      </div>
+
+       <div class="product-card" onclick="abrirDetalhe(3)">
+        <img src="../imagens/IMAGENS DOS PRODUTOS/image14.jpg" alt="Escultura em madeira">
+        <h3>ANÉIS PRINCESA | 12 Pcs</h3>
+        <p>R$ 200</p>
+        <div class="status esgotado">
+          <div class="status-dot"></div>
+          <span>esgotado</span>
+        </div>
+      </div>
+
+       <div class="product-card" onclick="abrirDetalhe(3)">
+        <img src="../imagens/IMAGENS DOS PRODUTOS/image15.jpg" alt="Escultura em madeira">
+        <h3>SANDÁLIA RASTEIRINHA</h3>
+        <p>R$ 200</p>
+        <div class="status esgotado">
+          <div class="status-dot"></div>
+          <span>esgotado</span>
+        </div>
+      </div>
+
+       <div class="product-card" onclick="abrirDetalhe(3)">
+        <img src="../imagens/IMAGENS DOS PRODUTOS/image16.jpg" alt="Escultura em madeira">
+        <h3>ALMOFADA EM BORDADO | 2 Unid</h3>
+        <p>R$ 200</p>
+        <div class="status esgotado">
+          <div class="status-dot"></div>
+          <span>esgotado</span>
+        </div>
+      </div>
+
+       <div class="product-card" onclick="abrirDetalhe(3)">
+        <img src="../imagens/IMAGENS DOS PRODUTOS/image17.jpg" alt="Escultura em madeira">
+        <h3>MINI TAPETE EM CROCHÊ | 60cm</h3>
+        <p>R$ 200</p>
+        <div class="status esgotado">
+          <div class="status-dot"></div>
+          <span>esgotado</span>
+        </div>
+      </div>
+
+       <div class="product-card" onclick="abrirDetalhe(3)">
+        <img src="../imagens/IMAGENS DOS PRODUTOS/image18.jpg" alt="Escultura em madeira">
+        <h3>KIT PERSONALIZADO</h3>
+        <p>R$ 200</p>
+        <div class="status esgotado">
+          <div class="status-dot"></div>
+          <span>esgotado</span>
+        </div>
+      </div>
+
+       <div class="product-card" onclick="abrirDetalhe(3)">
+        <img src="../imagens/IMAGENS DOS PRODUTOS/image19.jpg" alt="Escultura em madeira">
+        <h3>SOUSPLAT EM CIPÓ</h3>
+        <p>R$ 200</p>
+        <div class="status esgotado">
+          <div class="status-dot"></div>
+          <span>esgotado</span>
+        </div>
+      </div>
+
+       <div class="product-card" onclick="abrirDetalhe(3)">
+        <img src="../imagens/IMAGENS DOS PRODUTOS/image20.jpg" alt="Escultura em madeira">
+        <h3>TIGRE FOFO DE AMIGURUMI</h3>
+        <p>R$ 200</p>
+        <div class="status esgotado">
+          <div class="status-dot"></div>
+          <span>esgotado</span>
+        </div>
+      </div>
+
+
+    </div>
+  </main>
+
+  <button id="fab" onclick="adicionarProduto()">＋</button>
+  <script src="../meusprodutos/meusprodutos.js"></script>
+</body>
+</html>

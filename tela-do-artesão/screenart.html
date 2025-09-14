@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tela do Artesão</title>
+  <link rel="stylesheet" href="screenart.css"/>
+</head>
+<body>
+  <div class="container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="profile-pic">
+        <div class="profile-top">
+          <!-- Se usar Live Server com pasta /imagens na raiz, use /imagens/... -->
+          <!-- Se preferir relativo, troque para ../imagens/image2.jpg -->
+          <img id="fotoPerfil" src="/imagens/image2.jpg" alt="Foto do Artesão"/>
+          <label for="uploadFoto" class="upload-link">alterar foto</label>
+          <input type="file" id="uploadFoto" accept="image/*" hidden />
+        </div>
+        <h2>Flora Mendes Artesão</h2>
+        <p class="email">FloraMendes@artesanato.com</p>
+      </div>
+
+      <nav class="menu">
+        <a href="meusprodutos.html">Meus Produtos</a>
+        <a href="pedidos.html">Pedidos</a>
+        <a href="mensagens.html">Mensagens</a>
+        <a href="configuracoes.html">Configurações</a>
+        <a href="avaliacoes.html">Minhas Avaliações</a>
+        <a href="login.html" class="logout">Sair</a>
+      </nav>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main class="content">
+      <!-- RESUMO EDITÁVEL -->
+      <section class="profile-summary card">
+        <div class="summary-header">
+          <img id="fotoResumo" src="/imagens/image2.jpg" alt="Foto Resumo"/>
+          <div class="summary-fields">
+            <h2>Resumo do Perfil</h2>
+            <form id="formResumo">
+              <div class="row">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" placeholder="Seu nome" />
+              </div>
+
+              <div class="row">
+                <label for="especialidade">Especialidade</label>
+                <input type="text" id="especialidade" placeholder="Ex.: Esculturas em Madeira" />
+              </div>
+
+              <div class="row">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" placeholder="(00) 00000-0000" />
+              </div>
+
+              <div class="row">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="seuemail@exemplo.com" />
+              </div>
+
+              <div class="row">
+                <label for="site">Site <span class="opcional">(opcional)</span></label>
+                <input type="url" id="site" placeholder="www.seusite.com" />
+              </div>
+
+              <div class="row group">
+                <div class="col">
+                  <label for="instagram">Instagram <span class="opcional">(opcional)</span></label>
+                  <input type="text" id="instagram" placeholder="@seuinsta" />
+                </div>
+                <div class="col">
+                  <label for="facebook">Facebook <span class="opcional">(opcional)</span></label>
+                  <input type="text" id="facebook" placeholder="sua página" />
+                </div>
+                <div class="col">
+                  <label for="tiktok">TikTok <span class="opcional">(opcional)</span></label>
+                  <input type="text" id="tiktok" placeholder="@seutiktok" />
+                </div>
+              </div>
+              <p class="autosave-hint">As alterações são salvas automaticamente.</p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section class="profile-area card">
+        <h2>Área de Atuação</h2>
+        <select id="area">
+          <option>Madeira</option>
+          <option>Cerâmica</option>
+          <option>Tecelagem</option>
+          <option>Bordado</option>
+          <option>Outros</option>
+        </select>
+      </section>
+
+      <section class="profile-skills card">
+        <h2>Habilidades</h2>
+        <textarea id="skills-text" rows="3" placeholder="Digite suas habilidades (separe por vírgula, se quiser)"></textarea>
+      </section>
+
+      <section class="profile-competencias card">
+        <h2>Competências</h2>
+        <textarea id="competencias-text" rows="3" placeholder="Digite suas competências"></textarea>
+      </section>
+    </main>
+  </div>
+
+  <script src="screenart.js"></script>
+</body>
+</html>

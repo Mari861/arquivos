@@ -1,26 +1,28 @@
-function expandEffect(color, redirect = null) {
-  const overlay = document.createElement("div");
-  overlay.classList.add("expand", color);
-  document.body.appendChild(overlay);
+document.getElementById("formArtesao").addEventListener("submit", function(e) {
+  e.preventDefault();
 
-  setTimeout(() => {
-    overlay.style.width = "100%";
-  }, 10);
+  // Pega os valores
+  const nome = document.getElementById("nome").value;
+  const whatsapp = document.getElementById("whatsapp").value;
+  const cidade = document.getElementById("cidade").value;
+  const estado = document.getElementById("estado").value;
+  const tipo = document.getElementById("tipo").value;
+  const instagram = document.getElementById("instagram").value;
+  const facebook = document.getElementById("facebook").value;
 
-  setTimeout(() => {
-    overlay.remove();
-    if (redirect) {
-      window.location.href = redirect; // redireciona após a animação
-    }
-  }, 1000);
-}
+  // Salva no localStorage (pode ser útil para usar em outra página)
+  const dadosArtesao = {
+    nome,
+    whatsapp,
+    cidade,
+    estado,
+    tipo,
+    instagram,
+    facebook
+  };
 
-// Botão verde (Bem-vindo -> Entrar)
-document.getElementById("signInBtn").addEventListener("click", () => {
-  expandEffect("green", "../login/tela-do-artesão/screenart.html"); // redireciona para screenart.html
-});
+  localStorage.setItem("dadosArtesao", JSON.stringify(dadosArtesao));
 
-// Botão branco (Criar Conta -> Inscreva-se)
-document.getElementById("signUpBtn").addEventListener("click", () => {
-  expandEffect("white");
+  // Redireciona para a home
+  window.location.href = "home.html"; // ajuste o caminho da sua home
 });
